@@ -67,12 +67,14 @@ class JoinView {
             this.addFriend(message.data);
 
             if (this.friends.length > 1) {
+                /*
                 if (this.hostName !== this.userName) {
                     this.$startGame.innerText = "Waiting for host to start the game...";
                 } else {
                     this.$startGame.disabled = false;
                     this.$startGame.innerText = "Start Game";
                 }
+                 */
             }
         } else if (message.action === "start") {
             this.navigateToGame();

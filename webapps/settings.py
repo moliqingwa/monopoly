@@ -141,6 +141,7 @@ STATIC_URL = '/static/'
 config = ConfigParser()
 config.read(os.path.join(BASE_DIR, 'config.ini'))
 
+'''
 EMAIL_HOST = config.get('Email', 'Host')
 EMAIL_PORT = int(config.get('Email', 'Port'))
 EMAIL_HOST_USER = config.get('Email', 'User')
@@ -149,6 +150,7 @@ EMAIL_USE_SSL = True
 
 print('Email host:port = {host}:{port}, user={user}'.format(
     host=EMAIL_HOST, port=EMAIL_PORT, user=EMAIL_HOST_USER))
+'''
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'userdata')
 MEDIA_URL = '/userdata/'

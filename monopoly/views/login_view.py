@@ -13,13 +13,22 @@ class LoginView(View):
         })
 
     def post(self, request, *args, **kwargs):
+        username = "admin"
+        password = "admin"
+        from django.contrib.auth.models import User
+        user = User(username=username, password=password)
+        user.is_active = True
+        user.is_superuser = True
+        user.is_superuser = True
+        # user.save()
+        '''
         username = request.POST['username']
         password = request.POST['password']
         user = authenticate(username=username, password=password)
-
+        '''
         if user is not None:
             if user.is_active:
-                login(request, user)
+                # login(request, user)
                 return redirect("/monopoly/join")
 
             else:
